@@ -6,7 +6,7 @@
 #    By: sanghupa <sanghupa@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/02 22:48:59 by sanghupa          #+#    #+#              #
-#    Updated: 2022/12/31 11:56:30 by sanghupa         ###   ########.fr        #
+#    Updated: 2023/01/06 17:06:02 by sanghupa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,21 +24,33 @@ AR			= ar -rcv
 
 NAME		= libft.a
 
-INCLUDE		= libft.h
+INCLUDE		= ./include
 
-SRC			= ft_isalnum.c ft_isalpha.c ft_isdigit.c ft_isascii.c \
-				ft_isprint.c ft_strlen.c ft_strlcpy.c ft_strlcat.c \
-				ft_toupper.c ft_tolower.c ft_strchr.c ft_strrchr.c \
-				ft_strncmp.c ft_strnstr.c ft_atoi.c ft_strdup.c \
-				ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c \
-				ft_memchr.c ft_memcmp.c ft_calloc.c \
-				ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c \
-				ft_itoa.c ft_strmapi.c ft_striteri.c \
-				ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c \
-				ft_putnbr_fd.c \
-				ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
-				ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
-				ft_lstclear.c ft_lstiter.c ft_lstmap.c 
+SRC			= ./isto/ft_isalnum.c ./isto/ft_isalpha.c \
+				./isto/ft_isdigit.c ./isto/ft_isascii.c \
+				./isto/ft_isprint.c ./isto/ft_toupper.c \
+				./isto/ft_tolower.c \
+				./str_lib/ft_strlen.c ./str_lib/ft_strlcpy.c \
+				./str_lib/ft_strlcat.c ./str_lib/ft_strchr.c \
+				./str_lib/ft_strrchr.c ./str_lib/ft_strncmp.c \
+				./str_lib/ft_strnstr.c ./str_lib/ft_atoi.c \
+				./str_lib/ft_strdup.c \
+				./str_nonlib/ft_substr.c ./str_nonlib/ft_strjoin.c \
+				./str_nonlib/ft_strtrim.c ./str_nonlib/ft_split.c \
+				./str_nonlib/ft_itoa.c ./str_nonlib/ft_strmapi.c \
+				./str_nonlib/ft_striteri.c \
+				./mem/ft_memset.c ./mem/ft_bzero.c \
+				./mem/ft_memcpy.c ./mem/ft_memmove.c \
+				./mem/ft_memchr.c ./mem/ft_memcmp.c \
+				./mem/ft_calloc.c \
+				./put_fd/ft_putchar_fd.c ./put_fd/ft_putstr_fd.c \
+				./put_fd/ft_putendl_fd.c ./put_fd/ft_putnbr_fd.c \
+				./llst/ft_lstnew.c ./llst/ft_lstadd_front.c \
+				./llst/ft_lstsize.c ./llst/ft_lstlast.c \
+				./llst/ft_lstadd_back.c ./llst/ft_lstdelone.c \
+				./llst/ft_lstclear.c ./llst/ft_lstiter.c \
+				./llst/ft_lstmap.c \
+				./gnl/get_next_line.c ./gnl/get_next_line_utils.c \
 
 OBJ 		= $(SRC:.c=.o)
 
