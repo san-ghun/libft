@@ -6,7 +6,7 @@
 #    By: sanghupa <sanghupa@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/02 22:48:59 by sanghupa          #+#    #+#              #
-#    Updated: 2023/01/06 17:06:02 by sanghupa         ###   ########.fr        #
+#    Updated: 2023/01/21 18:49:58 by sanghupa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,6 +51,9 @@ SRC			= ./isto/ft_isalnum.c ./isto/ft_isalpha.c \
 				./llst/ft_lstclear.c ./llst/ft_lstiter.c \
 				./llst/ft_lstmap.c \
 				./gnl/get_next_line.c ./gnl/get_next_line_utils.c \
+				./ft_printf/ft_printf_cs.c ./ft_printf/ft_printf_diu.c \
+				./ft_printf/ft_printf_p.c ./ft_printf/ft_printf_hex.c \
+				./ft_printf/ft_printf.c
 
 OBJ 		= $(SRC:.c=.o)
 
