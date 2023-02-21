@@ -6,7 +6,7 @@
 #    By: sanghupa <sanghupa@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/02 22:48:59 by sanghupa          #+#    #+#              #
-#    Updated: 2023/01/21 18:49:58 by sanghupa         ###   ########.fr        #
+#    Updated: 2023/02/21 15:05:34 by sanghupa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,4 +74,14 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re 
+# Library Test Code
+
+TEST = test.c
+
+test: $(NAME) $(TEST)
+		$(CC) $(TEST) -o $(TEST:.c=.out) $(NAME) -I $(INCLUDE) -g
+		./$(TEST:.c=.out)
+		rm $(TEST:.c=.out)
+		rm -rf $(TEST:.c=.out.dSYM)
+
+.PHONY: all clean fclean re test
