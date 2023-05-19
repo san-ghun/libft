@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sanghupa <sanghupa@student.42berlin.de>    +#+  +:+       +#+         #
+#    By: sanghupa <sanghupa@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/02 22:48:59 by sanghupa          #+#    #+#              #
-#    Updated: 2023/02/21 15:05:34 by sanghupa         ###   ########.fr        #
+#    Updated: 2023/05/19 13:28:01 by sanghupa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ CC			= cc
 
 CFLAGS		= -Wall -Werror -Wextra
 
-RM			= rm -f
+RM			= rm
 
 AR			= ar -rcv
 # -r : replace or add the specified files to the archive.
@@ -61,16 +61,16 @@ OBJ 		= $(SRC:.c=.o)
 all: $(NAME)
 
 %.o: %.c
-		$(CC) $(CFLAGS) -c -o $@ $< -I $(INCLUDE)
+		@$(CC) $(CFLAGS) -c -o $@ $< -I $(INCLUDE)
 
 $(NAME): $(OBJ)
-		$(AR) $@ $^
+		@$(AR) $@ $^
 
 clean:
-		$(RM) $(OBJ)
+		@$(RM) -f $(OBJ)
 
 fclean: clean
-		$(RM) $(NAME)
+		@$(RM) -f $(NAME)
 
 re: fclean all
 
@@ -81,7 +81,7 @@ TEST = test.c
 test: $(NAME) $(TEST)
 		$(CC) $(TEST) -o $(TEST:.c=.out) $(NAME) -I $(INCLUDE) -g
 		./$(TEST:.c=.out)
-		rm $(TEST:.c=.out)
+		rm -f $(TEST:.c=.out)
 		rm -rf $(TEST:.c=.out.dSYM)
 
 .PHONY: all clean fclean re test
