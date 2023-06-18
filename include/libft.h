@@ -6,7 +6,7 @@
 /*   By: sanghupa <sanghupa@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 16:00:38 by sanghupa          #+#    #+#             */
-/*   Updated: 2023/01/06 17:00:00 by sanghupa         ###   ########.fr       */
+/*   Updated: 2023/06/19 00:45:38 by sanghupa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -184,6 +184,13 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 /// @param s the string on which to iterate.
 /// @param f the function to apply to each character.
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+
+/// @brief get the number of split strings obtained by splitting `s` 
+/// using the character `c` as a delimiter in the string passed as an argument.
+/// @param s the string to be split.
+/// @param c the delimiter character.
+/// @return the number of splited string.
+size_t	ft_split_size(char const *s, char c);
 
 /// @brief allocate with malloc() and returns an array of strings 
 /// obtained by splitting `s` using the character `c` as a delimiter. 

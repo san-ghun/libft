@@ -6,13 +6,13 @@
 /*   By: sanghupa <sanghupa@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 13:04:31 by sanghupa          #+#    #+#             */
-/*   Updated: 2022/12/29 22:43:09 by sanghupa         ###   ########.fr       */
+/*   Updated: 2023/06/19 00:38:42 by sanghupa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_split_size(char const *s, char c)
+size_t	ft_split_size(char const *s, char c)
 {
 	size_t	len;
 
